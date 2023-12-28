@@ -177,20 +177,25 @@ img {
 
 /* hero section start */
 .hero {
-    padding-top: 65px;
-    padding-bottom: 352px;
+    position: relative;
+    padding-top: 115px;
+    padding-bottom: 338px;
     background-color: #f5f5f5;
-    background-image: url("./images/bernardherman.png");
+    background-image: url("./images/herobg.png");
     background-repeat: no-repeat;
-    background-position: calc(50% + 350px) calc(50% - 30px);
+    background-position: calc(50% + 340px) calc(50% - 30px);
 }
-.notification-name {
+.hero::before {
+    position: absolute;
+    top: 70px;
+    left: calc(50% - 580px);
     padding: 12px 24px;
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0.5px;
-    background-color: #f8f9fe;
     color: #69b99d;
+    background-color: #f8f9fe;
+    content: "REAL ESTATE";
 }
 .hero-title-wrapper {
     width: 605px;
@@ -217,12 +222,80 @@ img {
     letter-spacing: 0.04px;
     color: #73788c;
 }
+.hero-box {
+    position: absolute;
+    bottom: 108px;
+    width: 751px;
+    display: flex;
+    align-items: center;
+    column-gap: 44px;
+    box-shadow: 35px 35px 65px 0px #926a7829;
+    padding: 32px;
+    background-color: #fefeff;
+}
+.hero-box-item-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.045px;
+    color: #1f2744;;
+}
+.hero-box-item-text {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.045px;
+    color: #a6a6a6;
+}
+.hero-box-item-text::after {
+    display: block;
+    width: 15.5px;
+    height: 8.5px;
+    margin-left: 12px;
+    background-image: url("./images/arrowbottom.svg");
+    background-size: 15.5px 8.5px;
+    background-repeat: no-repeat;
+    content: "";
+}
+.hero-box-link {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04px;
+    box-shadow: 0px 0px 65px 0px #69b99d52;
+    padding: 18px 48px;
+    text-decoration-line: none;
+    color: #fff;
+    background-color: #69b99d;
+}
+.hero-box-link:hover {
+    background-color: #5c9682;
+}
+.hero-box-link:active {
+    background-color: #69b99d;
+}
 /* hero section finish */
 
 /* section two start */
 .recomendation {
-    padding-top: 120px;
+    position: relative;
+    padding-top: 170px;
     padding-bottom: 108px;
+}
+.recomendation::before {
+    position: absolute;
+    top: 120px;
+    left: calc(50% - 580px);
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #69b99d;
+    background-color: #f8f9fe;
+    content: "DISCOVER";
 }
 .recomendation-title {
     margin-top: 16px;
@@ -254,12 +327,22 @@ img {
 }
 .recomendation-link {
     display: flex;
+    align-items: center;
     column-gap: 8px;
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0.5px;
     text-decoration-line: none;
     color: #69b99d;
+}
+.recomendation-link::after {
+    width: 20px;
+    height: 20px;
+    background-image: url("./images/arrowrightcircle.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
 }
 .recomendation-list {
     display: flex;
@@ -335,9 +418,22 @@ img {
 
 /* section three start */
 .forcustomer {
-    padding-top: 80px;
+    position: relative;
+    padding-top: 130px;
     padding-bottom: 80px;
     background-color: #f5f5f5;
+}
+.forcustomer::before {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 580px);
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #69b99d;
+    background-color: #f8f9fe;
+    content: "OUR ADVANTE";
 }
 .forcustomer-title-wrapper {
     width: 436px;
@@ -387,15 +483,51 @@ img {
     padding-bottom: 110px;
 }
 .property-wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 56px;
+}
+.property-wrapper::before {
+    position: absolute;
+    top: -90px;
+    left: 96px;
+    width: 174px;
+    height: 252px;
+    background-image: url("./images/propertybeforeimg.svg");
+    background-size: 174px 252px;
+    background-repeat: no-repeat;
+    content: "";
+}
+.property-wrapper::after {
+    position: absolute;
+    top: 393px;
+    left: 96px;
+    width: 515px;
+    height: 82px;
+    background-image: url("./images/propertyafterimg.svg");
+    background-size: 515px 82px;
+    background-repeat: no-repeat;
+    content: "";
 }
 .property-text-wrapper {
+    position: relative;
     width: 527px;
 }
+.property-text-wrapper::before {
+    position: absolute;
+    top: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #69b99d;
+    background-color: #f8f9fe;
+    content: "ABOUT US";
+}
 .property-title {
-    margin-top: 16px;
+    margin-top: 66px;
     margin-bottom: 16px;
     font-family: "Rubik";
     font-size: 48px;
@@ -437,9 +569,22 @@ img {
 
 /* article start */
 .peoplesay {
-    padding-top: 80px;
+    position: relative;
+    padding-top: 146px;
     padding-bottom: 80px;
     background-color: #f5f5f5;
+}
+.peoplesay::before {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 580px);
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #69b99d;
+    background-color: #f8f9fe;
+    content: "CUSTOMER TESTIMONIAL";
 }
 .peoplesay-title-wrapper {
     display: flex;
@@ -460,12 +605,22 @@ img {
 }
 .peoplesay-link {
     display: flex;
+    align-items: center;
     column-gap: 8px;
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0.5px;
     text-decoration-line: none;
     color: #69b99d;
+}
+.peoplesay-link::after {
+    width: 20px;
+    height: 20px;
+    background-image: url("./images/arrowrightcircle.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
 }
 .peoplesay-list {
     display: flex;
@@ -475,6 +630,16 @@ img {
     width: 376px;
     padding: 24px 24px 26px;
     border: 1px solid #dedcda;
+}
+.peoplesay-item::before {
+    display: block;
+    width: 42px;
+    height: 34px;
+    background-image: url("./images/quote.svg");
+    background-size: 42px 34px;
+    background-repeat: no-repeat;
+    background-position: left;
+    content: "";
 }
 .peoplesay-item-title {
     margin-top: 24px;
@@ -496,6 +661,33 @@ img {
 }
 .peoplesay-nickname-and-job-wrapper {
     display: flex;
+}
+.user-before-img-ux::before {
+    width: 48px;
+    height: 48px;
+    background-image: url("./images/uxdesigner.png");
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: left;
+    content: "";
+}
+.user-before-img-ui::before {
+    width: 48px;
+    height: 48px;
+    background-image: url("./images/uidesigner.png");
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: left;
+    content: "";
+}
+.user-before-img-research::before {
+    width: 48px;
+    height: 48px;
+    background-image: url("./images/uxresearcher.png");
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: left;
+    content: "";
 }
 .peoplesay-user-text-wrapper {
     width: 170px;
@@ -566,6 +758,16 @@ img {
     border-radius: 50%;
     background-color: #69b99d1a;
 }
+.questions-tel-circle::before {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("./images/callcalling.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+}
 .questions-tel-link {
     margin-left: 24px;
     font-size: 24px;
@@ -587,6 +789,16 @@ img {
     border-radius: 50%;
     background-color: #69b99d1a;
 }
+.questions-email-circle::before {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("./images/sms.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+}
 .questions-email-link {
     margin-left: 24px;
     font-size: 24px;
@@ -607,6 +819,16 @@ img {
     border-radius: 50%;
     background-color: #69b99d1a;
 }
+.questions-location-circle::before {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("./images/locationtick.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+}
 .questions-location-link {
     margin-left: 24px;
     font-size: 24px;
@@ -614,6 +836,63 @@ img {
     line-height: 150%;
     text-decoration-line: none;
     color:#1F2744;
+}
+.questions-inputs-wrapper {
+    width: 608px;
+}
+.questions-input {
+    display: block;
+    width: 608px;
+    margin-bottom: 16px;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    border: 1px solid #dedcda;
+    padding: 16px 24px;
+    color:#1f2744;
+}
+.questions-input::placeholder {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    opacity: 0.3;
+    color:#1f2744;
+}
+.user-feedback {
+    display: block;
+    width: 608px;
+    height: 150px;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #dedcda;
+    padding: 16px 24px;
+    resize: none;
+    color:#1f2744;
+}
+.user-feedback::placeholder {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    opacity: 0.3;
+    color: #1f2744;;
+}
+.questions-inputs-submit {
+    display: block;
+    width: 608px;
+    margin-top: 24px;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    box-shadow: 24px 24px 65px 0px #518c773d;
+    border: none;
+    padding: 16px 0;
+    color: #fff;
+    background-color: #69b99d;
 }
 /* section five finish */
 
